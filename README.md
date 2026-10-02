@@ -2,7 +2,8 @@
 
 MotoBuddy is a custom motorcycle companion device: a round, handlebar-mounted
 display that pairs with a phone app over Bluetooth to track ride performance
-(0–60 time, launches, GPS-based stats) and surface it at a glance while riding.
+(0–60 time, launches, lean angle mapped against speed, GPS-based stats) and
+surface it at a glance while riding.
 
 This repo is a **portfolio showcase** of the hardware and firmware work —
 photos of the real, assembled boards. The PCB design files, firmware source,
@@ -20,7 +21,8 @@ companion app, and website are developed privately and aren't published here.
 - ESP32-based main board, round form factor sized to mount behind the
   handlebars
 - Onboard GPS module for speed/position
-- IMU for launch and shake detection (used for 0–60 timing)
+- IMU for launch/shake detection (0–60 timing) and lean-angle tracking,
+  mapped against GPS speed
 - TFT display with adaptive brightness
 - USB-C for charging/programming, coin-cell-backed RTC
 - BLE link to a companion mobile app; Wi-Fi for OTA firmware updates
