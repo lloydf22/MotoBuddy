@@ -1,0 +1,104 @@
+# =====================================================================
+# MotoBuddy — public showcase repo
+#
+# This repo is meant to show the PCB design and embedded-systems work,
+# not to ship it. Only photos/videos and top-level write-ups are public.
+# Everything else (KiCad projects, manufacturing files, firmware, app
+# and website source) is excluded below and stays local-only.
+# =====================================================================
+
+# --- Whole private project folders ---
+/App/
+/MotoBuddyWeb/
+/Rev1.0/Alpha/
+/Rev1.0/MotoTest/
+/Rev1.0/V1.15/
+/Rev2.0/Beta/
+
+# --- Safety net: catch the same kinds of files anywhere else too,
+#     e.g. in a future Rev3.0 folder, so a new PCB rev is private
+#     by default instead of by remembering to update this file. ---
+
+# KiCad project + library files
+*.kicad_pcb
+*.kicad_sch
+*.kicad_sch-bak
+*.kicad_pro
+*.kicad_prl
+*.kicad_sym
+*.kicad_mod
+*.kicad_wks
+*-backups/
+*.pretty/
+*.3dshapes/
+fp-info-cache
+fp-lib-table
+sym-lib-table
+design-block-lib-table
+fabrication-toolkit-options.json
+
+# Manufacturing outputs (gerbers, drill, pick & place, netlists, BOM)
+*.gbr
+*.gbl
+*.gbs
+*.gbp
+*.gbo
+*.gm1
+*.gm2
+*.gtl
+*.gts
+*.gtp
+*.gto
+*.gbrjob
+*.drl
+*.ipc
+*-pos.csv
+*-pos.txt
+*.pos
+*.xy
+*.csv
+
+# 3D models / full-fidelity exports (expose exact board geometry)
+*.step
+*.stp
+*.glb
+*.gltf
+*.wrl
+
+# Schematic/layout exports (same design info as the native files)
+*.pdf
+
+# Firmware / embedded source
+*.cpp
+*.c
+*.h
+*.hpp
+*.ino
+platformio.ini
+
+# App & website source
+*.dart
+*.ts
+*.tsx
+*.js
+*.jsx
+*.mjs
+node_modules/
+.dart_tool/
+pubspec.yaml
+pubspec.lock
+
+# KiCad 3D-viewer render screenshots living among the showcase photos —
+# these expose exact component placement/layout the same way a STEP/GLB
+# export would, so they're kept private too (scoped to that one folder so
+# it doesn't also catch legitimate app/UI screenshots used elsewhere).
+Rev1.0/Photos_Videos/Rev2.0/Screenshot*.png
+
+# Build artifacts / editor / OS junk
+build/
+*.iml
+*.lnk
+.idea/
+.vscode/
+.DS_Store
+Thumbs.db
